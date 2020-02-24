@@ -1,17 +1,19 @@
-<h1>HOME</h1>
 
-<div class="inputs">
+<div class="petitionBody">
 
+    <h1>SIGN HERE</h1>
+<div class="canvas">
+
+<canvas id="canvas" width="600" height="200"></canvas>
 <form  method="post">
-
-<input type="text" name="first" value="">
-<input type="text" name="last" value="">
 </div>
-<input id="hidden"  type="hidden" name="hiddenInput" value="">
+
+<input id="hidden"  type="hidden" name="signature" value="">
 <button type="submit" name="submit">SUMBIT</button>
 <input type="hidden" name="_csrf" value="{{csrfToken}}">
 
 </form>
-<canvas id="canvas" width="600" height="200"></canvas>
+<input type="hidden" name="_csrf" value="{{csrfToken}}">
+
 <p> {{error}}</p>
-<!-- <button type="button" name="clear"> clear</button> -->
+</div>

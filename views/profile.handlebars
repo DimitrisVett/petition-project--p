@@ -1,0 +1,20 @@
+<div class="profBody">
+
+<div class="profStat">
+
+<form action="" method="POST">
+    <p>{{message}}</p>
+
+<h2 class="profLeft">
+    Age:<input type="number" name="age"><br>
+    City:<input type="text" name="city" placeholder=""><br>
+    Homepage:<input type="url" name="urlField" placeholder="">
+
+</h2>
+<input type="hidden" name="_csrf" value="{{csrfToken}}">
+
+    <button id="button" type="submit" value="submit">SUBMIT</button>
+    <p>Skip to <a href="/petition">petition</a>.</p>
+</form>
+</div>
+</div>

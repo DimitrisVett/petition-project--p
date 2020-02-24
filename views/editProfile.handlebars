@@ -1,0 +1,29 @@
+
+{{>menu}}
+<div class="profBody">
+
+<a href="/editProfile">
+    <h1>Edit your profile</h1>
+</a>
+<div class="profStat">
+<form  method="post">
+    <input type="hidden" name="_csrf" value="{{csrfToken}}">
+<h2>
+    {{message}}
+
+</h2>
+{{#infos}}
+    <h3>*Name: </h3>    <input type="text" name="first" value="{{first}}" placeholder="First Name" required><br>
+    <h3>*Last Name: </h3>    <input type="text" name="last" value="{{last}}" placeholder="Last Name" required><br>
+    <h3>*Password: </h3>    <input type="password" name="password" value="" placeholder="Password" ><br>
+    <h3>*Email: </h3>    <input type="email" name="email" value="{{email}}" placeholder="Email"required><br>
+    <h3>City: </h3>    <input type="text" name="city" value="{{city}}" placeholder="City"><br>
+    <h3>Age: </h3>    <input type="number" name="age" value="{{age}}" placeholder="Age"><br>
+    <h3>Homepage: </h3>    <input type="url" name="homepage" value="{{url}}" placeholder="Homapage">
+    <h6>(*required)</h5>
+
+{{/infos}}
+    <button type="submit" name="button">SAVE CHANGES</button>
+</form>
+</div>
+</div>

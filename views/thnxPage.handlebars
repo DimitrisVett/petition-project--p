@@ -1,7 +1,29 @@
-<h1>thnx that many have signed {{count}} </h1>
-<a href="/signers">
-     <h1>see who have signed</h1>
-</a>
+{{>menu}}
+
+<div class="thxBody">
+
+
+<div class="left">
+   <h1>There are {{count}} trainers supporting our cause </h1>
+   <a href="/signers">
+    <h1>See trainers who have signed</h1>
+    </a>
+</div>
 <input type="hidden" name="_csrf" value="{{csrfToken}}">
-<h2>this is ur signature</h2>
-<img src="{{imgUrl}}" alt="">
+
+<img src="{{imgUrl}}" alt="your signature">
+
+<div class="buttons">
+
+    <form class="" action="/delete" method="post">
+    <input type="hidden" name="_csrf" value="{{csrfToken}}">
+
+    <button type="submit" name="delete"> Delete your signature</button>
+</form>
+    <a href="/editProfile">
+    <input type="hidden" name="_csrf" value="{{csrfToken}}">
+
+    <button type="button" name="button"> EDIT  YOUR PROFILE</button>
+</a>
+</div>
+</div>

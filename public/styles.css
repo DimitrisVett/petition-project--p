@@ -1,6 +1,260 @@
 body {
     background: aquamarine;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    cursor: url("/assets/cursor.cur"), default;
 }
-#canvas {
-    border: 2px solid hotpink;
+input {
+    border-radius: 10px;
+}
+input:hover {
+    border: 1px solid black;
+}
+button:hover {
+    cursor: url("/assets/hover.cur"), auto;
+    border: white;
+}
+a:hover {
+    cursor: url("/assets/hover.cur"), auto;
+}
+a:link {
+    color: indigo;
+}
+a:visited {
+    color: indigo;
+}
+.profLeft {
+    text-align: center;
+}
+/* ***********register*************** */
+.registerBody {
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-rows: 1fr 4fr 1fr;
+
+    height: 100vh;
+    background-image: url("/assets/registerBgrnd.jpg");
+    background-size: cover;
+}
+.registerBody h1 {
+    font-family: "Tomorrow", sans-serif;
+}
+.registerBody h4 {
+    font-family: "Tomorrow", sans-serif;
+}
+.registerBody form {
+    margin-top: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.registerBody input {
+    height: 30px;
+}
+.registerBody button {
+    height: 30px;
+    width: 80px;
+    text-align: center;
+}
+.registerBody p {
+    font-family: "Tomorrow", sans-serif;
+    font-size: 32px;
+    width: 400px;
+    grid-column: 3/2;
+    grid-row: 3/2;
+    background: rgba(111, 175, 225, 0.38);
+    text-align: center;
+    justify-self: end;
+    align-self: center;
+    border-radius: 20%;
+}
+/* .registerBody .invisible {
+    width: 500px;
+    border: black solid 3px;
+} */
+
+/* ***********LOGIN*************** */
+.loginBody {
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-rows: 1fr 4fr 1fr;
+    font-family: "Tomorrow", sans-serif;
+
+    height: 100vh;
+    background-image: url("/assets/registerBgrnd.jpg");
+    background-size: cover;
+}
+.loginBody span {
+    font-size: 38px;
+}
+.loginBody form {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    background: rgba(111, 175, 225, 0.38);
+    text-align: center;
+    justify-self: end;
+    align-self: center;
+    border-radius: 20%;
+    height: 300px;
+    width: 400px;
+    padding-top: 80px;
+}
+
+/* ***********petition*************** */
+.petitionBody {
+    display: grid;
+    grid-template-columns: 1fr 5fr 1fr;
+    grid-template-rows: 1fr 3fr 1fr;
+    font-family: "Tomorrow", sans-serif;
+    height: 100vh;
+    background-image: url("/assets/petbag.jpg");
+    background-size: cover;
+}
+.canvas {
+    border: hotpink 3px solid;
+    grid-column: 2/3;
+    grid-row: 2/3;
+    border-image: url("/assets/pokebord.png") 60 / 40px/ 20px round;
+
+    place-self: center;
+}
+.petitionBody button {
+    width: 200px;
+    grid-column: 2/3;
+    grid-row: 3/4;
+    align-self: start;
+    justify-self: center;
+}
+.petitionBody h1 {
+    margin-top: 200px;
+    grid-column: 2/3;
+    grid-row: 1/2;
+    place-self: center;
+}
+
+/* ***********thnxPage*************** */
+.thxBody {
+    height: 100vh;
+    background-image: url("/assets/thnxbag.jpg");
+    display: grid;
+    grid-template-columns: 1fr auto 4fr;
+    grid-template-rows: 1fr auto 1fr;
+    font-family: "Tomorrow", sans-serif;
+    background-size: cover;
+}
+.thxBody .left {
+    grid-column: 2/3;
+    grid-row: 1/2;
+}
+.thxBody img {
+    border: hotpink 3px solid;
+    grid-column: 2/3;
+    grid-row: 2/3;
+    border-image: url("/assets/pokebord.png") 60 / 40px/ 20px round;
+    box-shadow: 2px 10px 112px -8px rgba(0, 0, 0, 0.75);
+}
+.thxBody .buttons {
+    grid-column: 2/3;
+    grid-row: 3/4;
+    place-self: center;
+}
+.thxBody button {
+    width: 300px;
+    height: 100px;
+    background: lightcyan;
+    border-radius: 40px;
+    box-shadow: 10px 10px 10px;
+}
+/* ***********Edit Profile*************** */
+.profBody {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 5fr 1fr;
+    font-family: "Tomorrow", sans-serif;
+    height: 100vh;
+    background-image: url("/assets/profbag.jpg");
+    background-size: cover;
+}
+.profBody a {
+    selfplace-self: center;
+    text-align: center;
+    grid-column: 2/3;
+    grid-row: 1/2;
+}
+.profBody .profStat {
+    border-radius: 30px;
+
+    padding-top: 50px;
+    grid-column: 2/3;
+    grid-row: 2/4;
+    background-image: url("/assets/pokedex.jpg");
+    background-size: cover;
+    /* height: 400px; */
+    text-align: center;
+    selfplace-self: center;
+}
+.profStat h3 {
+    /* display: inline; */
+}
+.profStat input {
+    text-align: center;
+    height: 20px;
+    border: none;
+}
+.profStat button {
+    width: 200px;
+    height: 50px;
+    border-radius: 30px;
+    background-color: lightcyan;
+}
+/* ***********SIGNERS*************** */
+.signBody {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 5fr 1fr;
+    font-family: "Tomorrow", sans-serif;
+    height: 100%;
+    background-image: url("/assets/mapbag.jpg");
+    background-size: cover;
+}
+.signBody h1 {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    text-align: center;
+}
+.signBody ul {
+    text-align: center;
+    grid-column: 2/3;
+    grid-row: 2/3;
+    font-size: 40px;
+    list-style: none;
+    background: rgba(111, 175, 225, 0.78);
+    border-radius: 30px;
+}
+.signBody li {
+    border-bottom: 2px pink dotted;
+}
+/* ***********partials*************** */
+.menu {
+    font-family: "Tomorrow", sans-serif;
+    font-size: 20px;
+    background: pink;
+    height: 50px;
+    display: flex;
+    text-decoration: none;
+    justify-content: space-around;
+    grid-column: 2/3;
+    grid-row: 1/2;
+    z-index: 2;
+}
+.menu li {
+    display: inline;
+    margin-right: 50px;
+}
+a {
+    text-decoration: none;
+}
+.menu li :hover {
+    background: hotpink;
 }

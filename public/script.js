@@ -1,5 +1,6 @@
 var canvas = $("#canvas");
 var hiddenInput = $("#hidden");
+//function to create a signature frame
 (function() {
     canvas.on("mousedown", function(e) {
         var c = canvas[0].getContext("2d");
@@ -17,10 +18,7 @@ var hiddenInput = $("#hidden");
         canvas.on("mouseup", function() {
             canvas.off("mousemove");
             let url = canvas[0].toDataURL();
-            // console.log(url);
-            // console.log(hiddenInput);
             hiddenInput.val(url);
-            // console.log("inside hiddenInput", hiddenInput.val());
         });
     });
 })();

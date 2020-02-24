@@ -1,6 +1,27 @@
+{{>menu}}
+<div class="signBody">
+
 <h1>these people have signed</h1>
+<input type="hidden" name="_csrf" value="{{csrfToken}}">
+
+{{#if on}}
 <ul>
-    {{#names}}
-    <li>{{first}} {{last}}</li>
-    {{/names}}
+    {{#usersCity}}
+    <li>
+        <a href="{{urlField}}"> Name: {{first}} {{last}}  </a> <br>| Age: {{age}} | City: {{city}}
+    </li>
+    {{/usersCity}}
+
 </ul>
+{{else}}
+
+<ul>
+    {{#users}}
+    <li>
+        <a href="{{urlField}}"> Name:{{first}} {{last}}</a> <br> Age:{{age}}
+        City :<a href="/signers/{{city}}"> {{city}}</a>
+    </li>
+    {{/users}}
+</ul>
+{{/if}}
+</div>

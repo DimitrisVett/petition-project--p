@@ -1,0 +1,18 @@
+<div class="loginBody">
+
+<form  method="post">
+    <span> WELCOME BACK TRAINER</span><br><br><br>
+    <input type="hidden" name="_csrf" value="{{csrfToken}}">
+
+    <input type="email" name="email" placeholder="email"> <br>
+    <input type="password" name="password" placeholder="password"> <br>
+    <button type="SUMBIT" name="button">LOGIN</button>
+    <h4>not a user yet? go to
+        <a href="/register"> regisration</a>
+    </h4>
+</form>
+<div class="error">
+    {{message}}
+
+</div>
+</div>

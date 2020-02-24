@@ -1,0 +1,26 @@
+<div class="registerBody">
+
+
+<h1>register here</h1>
+<form  method="post">
+
+<input type="text" name="first" placeholder="first name" required>
+<input type="text" name="last" placeholder="last name" required>
+<input type="email" name="email" placeholder="email" required>
+<input type="password" name="password" placeholder="password"required>
+<div class="invisible"></div>
+
+<button type="submit" name="submit">SUMBIT</button>
+<div class="invisible"></div>
+<input type="hidden" name="_csrf" value="{{csrfToken}}">
+
+</form>
+<h4> Already a user ? Go to
+<a href="/login"> login page</a>
+</h4>
+<h1>{{message}}</h1>
+<p>Hello trainer <br> Are you tired of having to buy the expensive nintedo consoles to be able
+    to play your favorite game ? <strong>REGISTER NOW</strong> <br>
+    and sign our petition.<br> WE DEMAND MULTI-PLATFORM POKEMON GAMES
+</p>
+</div>
